@@ -1,0 +1,75 @@
+# Data Inputs
+plume_json_filename: 
+
+# Data Outputs
+output_path: 
+
+instrument: EMIT
+input_data_location:
+
+
+# Algorithm settings
+retrieval_params:
+  - theta_deg
+  - C_Q_kg_per_s_mpers
+  - exponent
+  - a
+parallel: False
+use_saved_data_dict: False
+saved_data_dict_location: None
+use_width_based_cost_weighting: False
+use_plume_mask_or_rectangle_for_retrieval_region: rectangle # Choices are "plume" or "rectangle"
+
+nxb: 3 # Number of shifts to use in finding plume origin
+nyb: 3 # Number of shifts to use in finding plume origin
+skip: 1 # Number of shits to skip in finding plume origin
+
+# This should be True unless you are testing!
+do_param_exp: True # If True, C_Q and a parameter are interpreted as np.log(C_Q) and np.log(a)
+
+init_plume_parameters:
+  plume_model: empirical_dispersion
+  #Q_kg_per_s: 0.001
+  a: 5.01
+  exponent: 0.95
+  C_Q_kg_per_s_mpers: -2.3
+  #x0: 1000
+  theta_deg: use_programmatic_value
+  plume_x_m: use_programmatic_value
+  plume_y_m: use_programmatic_value
+
+
+retrieval_bounds:
+  C_Q_kg_per_s_mpers: 
+    - -9.21
+    - 6.9
+  a: 
+    - 2.
+    - 5.298
+  exponent: 
+    - 0.1
+    - 0.99
+  theta_deg: use_programmatic_value
+
+calc_CramerRaoBound: True
+
+trust_constr_straight_options:
+  maxiter: 500
+  tol: 1.0E-12
+  gtol: 1.0E-12
+  ftol: 1.0E-12
+
+trust_constr_bendy_options:
+  maxiter: 20000
+  tol: 1.0E-12
+  gtol: 1.0E-12
+  ftol: 1.0E-12
+
+plume_mean_locations_spacing_gsd_factor: 3
+n_bends: 100
+cross_plume_n_slices: 400
+cross_plume_cross_length: 151
+
+show_plots_to_screen: False
+plot_iterations: False
+plot_iterations_skip: 100
