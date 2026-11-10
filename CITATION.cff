@@ -1,0 +1,37 @@
+cff-version: 1.2.0
+title: SPIIRE
+message: >-
+  If you use this software for research we would appreciate
+  appropriate citation. 
+
+type: software
+authors:
+  - given-names: Jay E Fahlen
+    affiliation: >-
+      Jet Propulsion Laboratory, California Institute of
+      Technology
+    orcid: 'https://orcid.org/0000-0002-1660-8104'
+  - given-names: Philip G Brodrick
+    affiliation: >-
+      Jet Propulsion Laboratory, California Institute of
+      Technology
+    orcid: 'https://orcid.org/0000-0001-9497-7661'
+  - given-names: David R Thompson
+    affiliation: >-
+      Jet Propulsion Laboratory, California Institute of
+      Technology
+    orcid: 'https://orcid.org/0000-0003-1100-7550'
+  - given-names: Andrew K Thorpe
+    affiliation: >-
+      Jet Propulsion Laboratory, California Institute of
+      Technology
+    orcid: 'https://orcid.org/0000-0001-7968-5433'
+  - given-names: Robert O Green
+    affiliation: >-
+      Jet Propulsion Laboratory, California Institute of
+      Technology
+    orcid: 'https://orcid.org/0000-0001-9447-3076'
+
+identifiers:
+  - type: doi
+license: Apache-2.0
